@@ -4,16 +4,32 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run start-server & npm run build-watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vkrutsina/places-quiz.git"
   },
-  "author": "",
+  "author": "Vera Krutsina",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vkrutsina/places-quiz/issues"
   },
-  "homepage": "https://github.com/vkrutsina/places-quiz#readme"
+  "homepage": "https://github.com/vkrutsina/places-quiz#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "postgres": "^1.0.2",
+    "react": "^16.13.1",
+    "react-com": "^1.0.6",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "sequelize": "^6.3.3",
+    "volleyball": "^1.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "webpack": "^4.44.0"
+  }
 }
