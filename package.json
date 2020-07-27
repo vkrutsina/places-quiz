@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run start-server & npm run build-watch"
+    "start-server": "nodemon --watch server -e js,html server/main.js",
+    "build-watch": "webpack -w",
+    "start": "npm run start-server & npm run build-watch",
+    "seed": "node ./bin/seed"
   },
   "repository": {
     "type": "git",
@@ -18,11 +21,14 @@
   },
   "homepage": "https://github.com/vkrutsina/places-quiz#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "@babel/runtime": "^7.10.5",
     "axios": "^0.19.2",
+    "babel-polyfill": "^6.26.0",
     "postgres": "^1.0.2",
     "react": "^16.13.1",
-    "react-com": "^1.0.6",
     "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "sequelize": "^6.3.3",
     "volleyball": "^1.5.1"
@@ -30,6 +36,10 @@
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
+    "@babel/preset-react": "^7.10.4",
+    "css-loader": "^3.6.0",
+    "nodemon": "^2.0.4",
+    "style-loader": "^1.2.1",
     "webpack": "^4.44.0"
   }
 }

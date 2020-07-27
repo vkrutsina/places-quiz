@@ -10,7 +10,7 @@ module.exports = app;
 app.use(volleyball);
 
 app.use(express.json());
-app.use(express.urlencoded({ extened: true }));
+// app.use(express.urlencoded({ extened: true }));
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
